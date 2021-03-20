@@ -44,5 +44,5 @@ plugin :tmp_restart
 
 if ENV.fetch("RAILS_ENV") == "production"
   bind "unix:///src/app/tmp/puma.sock"
-  workers 2
+  workers 4
 end
