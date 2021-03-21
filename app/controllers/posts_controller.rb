@@ -56,6 +56,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def slow
+    @time = params[:t] || 1
+    sleep(@time.to_i)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
